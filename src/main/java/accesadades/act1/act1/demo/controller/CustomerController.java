@@ -1,25 +1,28 @@
 package accesadades.act1.act1.demo.controller;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import accesadades.act1.act1.demo.model.Customer;
+import accesadades.act1.act1.demo.repository.CustomerRepository;
 
 @RestController
 @RequestMapping("/api")
-
 public class CustomerController {
+
+    @Autowired
+    private CustomerRepository customerRepository;
 
     @PostMapping("/students/batch")
     public String addStudents() {
-        return "Endpoint post";
+        customerRepository.saveBatch();
+        return "10 alumnes inserits correctament!";
     }
 
     @GetMapping("/students")
-    public String getStudents() {
-        return "Endpoint get";
+    public List<Customer> getStudents() {
+        return customerRepository.findAll();
     }
-
 }

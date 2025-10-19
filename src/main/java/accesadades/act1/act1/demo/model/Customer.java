@@ -7,6 +7,19 @@ public class Customer {
     private String cognom;
     private int age;
     private String cicle;
+    private int any;
+
+    public Customer() {
+    }
+
+    public Customer(long id, String nom, String cognom, int age, String cicle, int any) {
+        this.id = id;
+        this.nom = nom;
+        this.cognom = cognom;
+        this.age = age;
+        this.cicle = cicle;
+        this.any = any;
+    }
 
     public long getId() {
         return id;
@@ -55,16 +68,4 @@ public class Customer {
     public void setAny(int any) {
         this.any = any;
     }
-
-    private int any;
-
-    public Customer(long id, String nom, String cognom, int age, String cicle, int any) {
-        this.id = id;
-        this.nom = nom;
-        this.cognom = cognom;
-        this.age = age;
-        this.cicle = cicle;
-        this.any = any;
-    }
-
 }

@@ -1,12 +1,10 @@
 DROP TABLE IF EXISTS students;
 
-CREATE TABLE students(
-
+CREATE TABLE students (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     nom VARCHAR(100) NOT NULL,
-    cognom VARCHA(100) DEFAULT NULL,
-    age INT DEFAULT 0,
+    cognom VARCHAR(100),
+    age INT NOT NULL,
     cicle VARCHAR(100) NOT NULL,
-    any INT DEFAULT 0
-    
+    any_year INT NOT NULL
 );
