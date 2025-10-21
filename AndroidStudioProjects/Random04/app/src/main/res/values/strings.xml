@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="bienvenido_a">Bienvenido/a !</string>
+    <string name="la_fecha_es">La fecha es:!</string>
+    <string name="introduzca_su_nombre_de_usuario">Introduzca su nombre de usuario:</string>
+    <string name="continuar">Continuar</string>
+    <string name="volver">Volver</string>
+    <string name="introduzca_un_n_mero_v_lido">Introduzca un número válido</string>
+    <string name="perfecto_adivine">Perfecto, $nombre, te toca adivinar un número entre el 1 y el 3</string>
+</resources>
