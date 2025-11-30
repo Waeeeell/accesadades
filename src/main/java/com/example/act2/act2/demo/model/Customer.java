@@ -8,6 +8,7 @@ public class Customer {
     private String description;
     private String email;
     private String password;
+    private String imagePath;
     private Timestamp ultimAcces;
     private Timestamp dataCreated;
     private Timestamp dataUpdated;
@@ -50,6 +51,14 @@ public class Customer {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getImagePath() {
+        return imagePath;
+    }
+
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
     }
 
     public Timestamp getUltimAcces() {

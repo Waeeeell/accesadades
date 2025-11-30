@@ -1,0 +1,26 @@
+{
+  "data": {
+    "count": 3,
+    "control": "OK",
+    "users": [
+      {
+        "name": "JsonUser 1",
+        "description": "Desde JSON",
+        "email": "json1@example.com",
+        "password": "pass1"
+      },
+      {
+        "name": "JsonUser 2",
+        "description": "Desde JSON",
+        "email": "json2@example.com",
+        "password": "pass2"
+      },
+      {
+        "name": "JsonUser 3",
+        "description": "Desde JSON",
+        "email": "json3@example.com",
+        "password": "pass3"
+      }
+    ]
+  }
+}

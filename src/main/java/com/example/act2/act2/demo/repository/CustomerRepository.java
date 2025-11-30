@@ -17,6 +17,7 @@ public class CustomerRepository {
         this.jdbcTemplate = jdbcTemplate;
     }
 
+    // Guardar usuario
     public int save(Customer c) {
         String sql = "INSERT INTO users (name, description, email, password, data_created, data_updated) VALUES (?, ?, ?, ?, NOW(), NOW())";
         return jdbcTemplate.update(sql, c.getName(), c.getDescription(), c.getEmail(), c.getPassword());
@@ -36,14 +37,15 @@ public class CustomerRepository {
         }
     }
 
+    // NUEVO MÉTODO PARA ACTUALIZAR SOLO LA IMAGEN
+    public int updateImagePath(Long id, String path) {
+        String sql = "UPDATE users SET image_path = ? WHERE id = ?";
+        return jdbcTemplate.update(sql, path, id);
+    }
+
     public int update(Customer c, Long id) {
         String sql = "UPDATE users SET name=?, description=?, email=?, password=?, data_updated=NOW() WHERE id=?";
         return jdbcTemplate.update(sql, c.getName(), c.getDescription(), c.getEmail(), c.getPassword(), id);
-    }
-
-    public int updateName(Long id, String name) {
-        String sql = "UPDATE users SET name=?, data_updated=NOW() WHERE id=?";
-        return jdbcTemplate.update(sql, name, id);
     }
 
     public int delete(Long id) {
