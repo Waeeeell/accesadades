@@ -9,9 +9,27 @@ public class Customer {
     private String email;
     private String password;
     private String imagePath;
+
     private Timestamp ultimAcces;
     private Timestamp dataCreated;
     private Timestamp dataUpdated;
+
+    public Customer(Long id, String name, String description, String email, String password, String imagePath,
+            Timestamp ultimAcces, Timestamp dataCreated, Timestamp dataUpdated) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.email = email;
+        this.password = password;
+        this.imagePath = imagePath;
+        this.ultimAcces = ultimAcces;
+        this.dataCreated = dataCreated;
+        this.dataUpdated = dataUpdated;
+    }
+
+    public Customer() {
+
+    }
 
     public Long getId() {
         return id;
@@ -84,4 +102,5 @@ public class Customer {
     public void setDataUpdated(Timestamp dataUpdated) {
         this.dataUpdated = dataUpdated;
     }
+
 }
